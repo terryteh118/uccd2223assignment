@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Paradise Dining</title>
+
+    <link rel="icon" sizes="128x128" href="/icons/icon-128x128.png">
+    <link rel="icon" sizes="192x192" href="/icons/icon-192x192.png">
+    <link rel="icon" sizes="256x256" href="/icons/icon-256x256.png">
+    <link rel="icon" sizes="384x384" href="/icons/icon-384x384.png">
+    <link rel="icon" sizes="512x512" href="/icons/icon-512x512.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="background-style">
+    <!--Title Bar-->
+    <div class="container-lg d-flex align-items-center mt-3 content-style">
+        <h1 class="flex-grow-1 justify-content-center text-center p-2">
+            <a class="nav-link" href="index.html" style="font-family: 'Merriweather', serif;">Paradise Dining</a>
+        </h1>
+
+        <!--Nav Link for L and higher-->
+        <div class="d-none d-lg-block p-2">
+            <ul class="nav flex-nowrap">
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="reservations.html">Reservations</a>
+                </li>
+
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="contact.html" style="color: grey;">Contact</a>
+                </li>
+
+                <li class="nav-item p-2">
+                    <a class="nav-link orderOnline" href="orderOnline.html">Order Online</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Nav Link for L lower-->
+        <div class="d-block d-lg-none p-3">
+            <button class="btn btn-dark" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="icons/PullDownIcon.png" height="25" alt="Pull Down">
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-dark text-center" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item" href="about.html">About</a></li>
+                <li><a class="dropdown-item" href="menu.html">Menu</a></li>
+                <li><a class="dropdown-item" href="reservations.html">Reservations</a></li>
+                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                <li><a class="dropdown-item" href="orderOnline.html">Order Online</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--SideNav-->
+    <div id="mySidenav" class="sidenav content-style">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="container mt-4">
+            <form>
+                <div class="row">
+                    <h2 style="text-align:center" class="mb-3">Login with Social Media
+                        <!--or Manually-->
+                    </h2>
+
+                    <div class="col-12 text-center">
+                        <a href="#" class="fb mb-3" id="fbbtn">
+                            <i class="fa fa-facebook fa-fw"></i> Sign in with Facebook
+                        </a>
+                        <a href="#" class="twitter btn mb-3" id="twitterbtn">
+                            <i class="fa fa-twitter fa-fw"></i> Sign in with Twitter
+                        </a>
+                        <a href="#" class="google btn mb-3" id="googlebtn">
+                            <i class="fa fa-google fa-fw"></i>
+                        </a>
+                    </div>
+
+                    <!-- <div class="col-12">
+                        <div class="hide-md-lg">
+                            <p>Or sign in manually:</p>
+                        </div>
+
+                        <input class="form-control mb-3" type="text" name="username" placeholder="Username"
+                            required>
+                        <input class="form-control mb-3" type="password" name="password"
+                            placeholder="Password" required>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </div> -->
+
+                </div>
+            </form>
+        </div>
+
+        <!-- <div class="bottom-container">
+            <div class="row">
+                <div class="col">
+                    <a href="#">Sign up</a>
+                </div>
+                <div class="col-lg-auto pe-4">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <!--Background Image for XL-->
+    <div class="container-lg mt-1 d-none d-xl-block background-style"
+        style="background-image: url(images/Contact1.jpg); background-attachment: fixed; height: 600px;"></div>
+
+    <!--Image for L and lower-->
+    <div class="container-lg mt-1 p-0 d-block d-xl-none">
+        <img src="images/Contact1.jpg" class="img-fluid" alt="Contact Picture">
+    </div>
+
+    <!--Feedback Information and Form-->
+    <div class="container-lg d-flex flex-lg-row flex-column justify-content-evenly mt-1 content-style">
+        <!--For screen L and higher-->
+        <div class="flex-column p-5 w-50 d-none d-lg-block">
+            <h1 class="text-center p-5" style="font-family: 'Poppins', serif;">
+                Contact
+            </h1>
+
+            <div class="text-center p-5">
+                <span>Tel:123 456 6780</span>
+                <br>
+                <span>info@mysite.com</span>
+            </div>
+
+            <div class="text-center p-5">
+                <span>123, Jalan Masjid Negeri</span>
+                <br>
+                <span>Jelutong, Penang 11600</span>
+            </div>
+
+            <div class="text-center p-5">
+                <a class="mx-2" href="https://www.twitter.com">
+                    <img src="icons/TwitterIcon.png" alt="Twitter" height="25">
+                </a>
+
+                <a class="mx-2" href="https://www.facebook.com">
+                    <img src="icons/FacebookIcon.png" alt="Facebook" height="25">
+                </a>
+
+                <a class="mx-2" href="https://www.instagram.com">
+                    <img src="icons/InstagramIcon.png" alt="Instagram" height="25">
+                </a>
+            </div>
+        </div>
+
+        <!--For screen MD and lower-->
+        <div class="flex-column p-5 d-lg-none">
+            <h1 class="text-center p-5" style="font-family: 'Poppins', serif;">
+                Contact
+            </h1>
+
+            <div class="text-center p-5">
+                <span>Tel:123 456 6780</span>
+                <br>
+                <span>info@mysite.com</span>
+            </div>
+
+            <div class="text-center p-5">
+                <span>123, Jalan Masjid Negeri</span>
+                <br>
+                <span>Jelutong, Penang 11600</span>
+            </div>
+
+            <div class="text-center p-5">
+                <a class="mx-2" href="https://www.twitter.com">
+                    <img src="icons/TwitterIcon.png" alt="Twitter" height="25">
+                </a>
+
+                <a class="mx-2" href="https://www.facebook.com">
+                    <img src="icons/FacebookIcon.png" alt="Facebook" height="25">
+                </a>
+
+                <a class="mx-2" href="https://www.instagram.com">
+                    <img src="icons/InstagramIcon.png" alt="Instagram" height="25">
+                </a>
+            </div>
+        </div>
+
+        <!--For screen L and higher-->
+        <div class="flex-column p-5 w-50 d-none d-lg-block">
+            <h1 class="text-center p-5" style="font-family: 'Poppins', serif;">
+                Feedback
+            </h1>
+
+            <form class="row g-3 p-4">
+                <div class="col-md-6">
+                    <label for="inputFName" class="form-label">First Name*</label>
+                    <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                        id="inputFName" required>
+
+                    <div class="invalid-feedback">
+                        Please provide a name.
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputLName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name"
+                        id="inputLName">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputEmail" class="form-label">Email*</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="xxxxxx@gmail.com" required>
+
+                    <div class="invalid-feedback">
+                        Please provide email.
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputSubject" class="form-label">Subject*</label>
+                    <input type="text" class="form-control" id="inputSubject" required>
+
+                    <div class="invalid-feedback">
+                        Please provide a subject.
+                    </div>
+                </div>
+
+                <div class="col-12 text-center">
+                    <label for="inputMessage" class="form-label">Leave us a message...</label>
+                    <textarea class="form-control" id="inputMessage" rows="1"></textarea>
+                </div>
+
+                <div class="d-grid">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-primary mt-3" type="button" onclick="openNav()" id="signInbtn">Sign
+                        In</button>
+                </div>
+            </form>
+        </div>
+
+        <!--For screen MD and lower-->
+        <div class="flex-column p-5 d-lg-none">
+            <h1 class="text-center" style="font-family: 'Poppins', serif;">
+                Feedback
+            </h1>
+
+            <form class="row g-3 mt-5">
+                <div class="col-md-6">
+                    <label for="inputFName" class="form-label">First Name*</label>
+                    <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                        id="inputFName" required>
+
+                    <div class="invalid-feedback">
+                        Please provide a name.
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputLName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name"
+                        id="inputLName">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputEmail" class="form-label">Email*</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="xxxxxx@gmail.com" required>
+
+                    <div class="invalid-feedback">
+                        Please provide email.
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputSubject" class="form-label">Subject*</label>
+                    <input type="text" class="form-control" id="inputSubject" required>
+
+                    <div class="invalid-feedback">
+                        Please provide a subject.
+                    </div>
+                </div>
+
+                <div class="col-12 text-center">
+                    <label for="inputMessage" class="form-label">Leave us a message...</label>
+                    <textarea class="form-control" id="inputMessage" rows="1"></textarea>
+                </div>
+
+                <div class="d-grid">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-primary mt-3" type="button" onclick="openNav()" id="signInbtn">Sign
+                        In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--Embedded Google Map-->
+    <div class="container-lg mt-1 p-0">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5617.359323956167!2d100.30067744720058!3d5.405870991047467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac3e121c2caf9%3A0x148ab96f6f6f396!2sPenang%20Digital%20Library%20(Phase%202)!5e0!3m2!1sen!2smy!4v1616518466458!5m2!1sen!2smy"
+            height="600" style="border:0; filter: invert(95%)" allowfullscreen="" loading="lazy" class="w-100"></iframe>
+    </div>
+
+    <!--Footer-->
+    <div class="container-lg d-flex flex-lg-row flex-column justify-content-evenly content-style">
+        <div class="text-center p-4">
+            <span>Mon - Fri: 11am - 10pm​</span>
+            <br>
+            <span>Sat - Sun: 11am - 12am</span>
+        </div>
+
+        <div class="text-center p-4">
+            <span>123, Jalan Masjid Negeri</span>
+            <br>
+            <span>Jelutong, Penang 11600</span>
+        </div>
+
+        <div class="text-center p-4">
+            <span>Follow Us</span>
+            <br>
+
+            <a class="mx-1" href="https://www.twitter.com">
+                <img src="icons/TwitterIcon.png" alt="Twitter" height="25">
+            </a>
+
+            <a class="mx-1" href="https://www.facebook.com">
+                <img src="icons/FacebookIcon.png" alt="Facebook" height="25">
+            </a>
+
+            <a class="mx-1" href="https://www.instagram.com">
+                <img src="icons/InstagramIcon.png" alt="Instagram" height="25">
+            </a>
+        </div>
+    </div>
+
+    <!--Copyright Bar-->
+    <p class="p-3 text-center container-lg mt-1 content-style">Copyright ©2023 All rights reserved. Proudly created with
+        Bootstrap.</p>
+
+    <!--Script Section-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!--Chat Bot-->
+    <script src="https://www.momentcrm.com/embed"></script>
+    <script>
+        MomentCRM('init', {
+            'teamId': 'paradisedining',
+            'doChat': true,
+            'doTracking': false,
+        });
+    </script>
+
+    <!-- Social Media Sidebar -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6061de2083e89899"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+
+    <script src="js/config.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var app = firebase.initializeApp(firebaseConfig);
+
+        var db = firebase.firestore(app);
+
+        //subscribing to collection updates
+        var ref = firebase.firestore(app).collection('Feedback');
+
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "380px";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function ableFeedback(event) {
+            event.preventDefault();
+
+            var firstName = $("#inputFName").val();
+            var lastName = $("#inputLName").val();
+            var email = $("#inputEmail").val();
+            var subject = $("#inputSubject").val();
+            var message = $("#inputMessage").val();
+
+            var year = new Date().getFullYear();
+            var month = new Date().getMonth();
+            var day = new Date().getDate();
+            var hour = new Date().getHours();
+            var minutes = new Date().getMinutes();
+
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+
+            var recordedTime = year + "-" + (month + 1) + "-" + day + " on " + hour + ":" + minutes;
+
+            ref.add({
+                FirstName: firstName,
+                LastName: lastName,
+                Email: email,
+                Subject: subject,
+                Message: message,
+                RecordedTime: recordedTime
+            }).then(function (docRef) {
+                console.log("Document written with ID: ", docRef.id);
+
+                $("#inputFName").val("");
+                $("#inputLName").val("");
+                $("#inputEmail").val("");
+                $("#inputSubject").val("");
+                $("#inputMessage").val("");
+
+                alert("Feedback Received!!\n\n\n Thank You :)");
+            }).catch(function (error) {
+                console.error("Error adding document: ", error);
+            });
+        }
+
+        function unableFeedback(event) {
+            event.preventDefault();
+
+            alert("Please sign in to provide feedback!!!");
+        }
+
+        function toggleSignInGoogle() {
+            if (!firebase.auth().currentUser) {
+                var provider = new firebase.auth.GoogleAuthProvider();
+                provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+
+                firebase.auth().signInWithPopup(provider)
+                    .then(function (result) {
+                        var token = result.credential.accessToken;
+                        var user = result.user;
+
+                        alert("Signed In!!!");
+                    })
+                    .catch(function (error) {
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+                        var email = error.email;
+                        var credential = error.credential;
+
+                        if (errorCode === 'auth/account-exists-with-different-credential') {
+                            alert('You have already signed up with a different auth provider for that email.');
+                        }
+                        else {
+                            console.error(error);
+                        }
+                    });
+            }
+            else {
+                firebase.auth().signOut();
+                alert("Signed Out!!!");
+            }
+        }
+
+        function initApp() {
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                    var displayName = user.displayName;
+                    var email = user.email;
+                    var emailVerified = user.emailVerified;
+                    var photoURL = user.photoURL;
+                    var isAnonymous = user.isAnonymous;
+                    var uid = user.uid;
+                    var providerData = user.providerData;
+
+                    console.log("Signed in");
+                    console.log(displayName);
+
+                    document.getElementById("googlebtn").addEventListener('click', toggleSignInGoogle, false);
+                    document.getElementById("googlebtn").innerHTML = "Sign Out";
+                    document.getElementById("signInbtn").innerHTML = "Welcome, " + displayName;
+                    $("form").attr("onsubmit", "ableFeedback(event)");
+                    $("#fbbtn").hide();
+                    $("#twitterbtn").hide();
+                }
+                else {
+                    console.log("Signed out");
+
+                    document.getElementById("googlebtn").addEventListener('click', toggleSignInGoogle, false);
+                    document.getElementById("googlebtn").innerHTML = "Sign in with Google";
+                    document.getElementById("signInbtn").innerHTML = "Sign In";
+                    $("form").attr("onsubmit", "unableFeedback(event)");
+                    $("#fbbtn").show();
+                    $("#twitterbtn").show();
+                }
+            });
+        }
+
+        window.onload = function () {
+            initApp();
+        }
+    </script>
+</body>
+
+</html>

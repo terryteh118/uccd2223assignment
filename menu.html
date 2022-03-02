@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Paradise Dining</title>
+
+    <link rel="icon" sizes="128x128" href="/icons/icon-128x128.png">
+    <link rel="icon" sizes="192x192" href="/icons/icon-192x192.png">
+    <link rel="icon" sizes="256x256" href="/icons/icon-256x256.png">
+    <link rel="icon" sizes="384x384" href="/icons/icon-384x384.png">
+    <link rel="icon" sizes="512x512" href="/icons/icon-512x512.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="background-style">
+    <!--Title Bar-->
+    <div class="container-lg d-flex align-items-center mt-3 content-style">
+        <h1 class="flex-grow-1 justify-content-center text-center p-2">
+            <a class="nav-link" href="index.html" style="font-family: 'Merriweather', serif;">Paradise Dining</a>
+        </h1>
+
+        <!--Nav Link for L and higher-->
+        <div class="d-none d-lg-block p-2">
+            <ul class="nav flex-nowrap">
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="menu.html" style="color: grey;">Menu</a>
+                </li>
+
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="reservations.html">Reservations</a>
+                </li>
+
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+                <li class="nav-item p-2">
+                    <a class="nav-link orderOnline" href="orderOnline.html">Order Online</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Nav Link for L lower-->
+        <div class="d-block d-lg-none p-3">
+            <button class="btn btn-dark" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="icons/PullDownIcon.png" height="25" alt="Pull Down">
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-dark text-center" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item" href="about.html">About</a></li>
+                <li><a class="dropdown-item" href="menu.html">Menu</a></li>
+                <li><a class="dropdown-item" href="reservations.html">Reservations</a></li>
+                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                <li><a class="dropdown-item" href="orderOnline.html">Order Online</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Menu Section-->
+    <div class="container-lg mt-1 p-5 content-style">
+
+        <!--Starter-->
+        <div class="d-flex flex-column align-items-center mb-5">
+            <h1 class="display-3 text-center" style="margin-top: 3rem;" style="font-family: 'Merriweather', serif;">
+                Menu
+            </h1>
+
+            <p class="w-50 text-center mb-5">
+                Our menu consist of Starter, Main Course.
+                Chef Recommend is marked with a star icon.
+                Vegetarian dishes are make with a vege icon.
+            </p>
+
+            <div class="fs-4 text-center border-bottom my-5" style="font-family: 'Merriweather', serif;">
+                Starters
+            </div>
+        </div>
+
+        <!--Starter Menu-->
+        <div class="row gy-5 justify-content-center mb-5 background-style"
+            style="background-image: url(images/Starters.jpg); background-attachment: fixed;">
+            <div class="col-lg-4 fs-5 text-center px-5">
+                <span style="font-family: 'Poppins', serif;" class="fs-4" id="starterName1">
+                    Soup of The Day
+                </span>
+
+                <p class="fs-6 mt-2" id="starterDesc1">
+                    Our soups are prepared every morning using only the freshest vegetables. Every soup served has a
+                    vegetable base and is gluten-friendly as we use absolutely no flour, wheat or stock.
+                </p>
+
+                <span class="d-block mt-5" id="starterPrice1">$4.90</span>
+
+                <img src="icons/StarIcon.png" alt="vegan" width="20px" height="20px" class="mt-2">
+            </div>
+
+            <div class="col-lg-4 fs-5 text-center px-5">
+                <span style="font-family: 'Poppins', serif;" class="fs-4" id="starterName2">
+                    Bread with Olive Oil & Balsamic Dip
+                </span>
+
+                <p class="fs-6 mt-2" id="starterDesc2">
+                    Easy appetizer, olive oil and balsamic vinegar pair with herbs and garlic for the easiest and most
+                    delicious bread dipping oil combo you've ever had! Best enjoyed with crusty French bread and a big
+                    glass of red wine!
+                </p>
+
+                <span class="d-block mt-5" id="starterPrice2">$8.90</span>
+            </div>
+
+            <div class="col-lg-4 fs-5 text-center px-5">
+                <span style="font-family: 'Poppins', serif;" class="fs-4" id="starterName3">
+                    Organic Spinach Salad
+                </span>
+
+                <p class="fs-6 mt-2" id="starterDesc3">
+                    Salad itself was so simple. Baby spinach was fresh, the avocado, perfectly ripe, and the dried
+                    cranberries and pine nuts a lovely touch add on dressing and a crunchy bite of sea salt!
+                </p>
+
+                <span class="d-block mt-5" id="starterPrice3">$10.90</span>
+
+                <img src="icons/StarIcon.png" alt="vegan" width="20px" height="20px" class="mt-2">
+            </div>
+
+            <div class="col-lg-4 fs-5 text-center px-5">
+                <span style="font-family: 'Poppins', serif;" class="fs-4" id="starterName4">
+                    Roasted Vegetables
+                </span>
+
+                <p class="fs-6 mt-2" id="starterDesc4">
+                    Roasted vegetables are a uniquely special side. Very simple vegetable dish seasoned with dry soup
+                    powder, and baked until tender and caramelized. They're tender and creamy but crisp and crunchy.
+                </p>
+
+                <span class="d-block mt-5" id="starterPrice4">$5.90</span>
+            </div>
+
+            <div class="col-lg-4 fs-5 text-center px-5">
+                <span style="font-family: 'Poppins', serif;" class="fs-4" id="starterName5">
+                    Smoked Salmon Toasts
+                </span>
+
+                <p class="fs-6 mt-2" id="starterDesc5">
+                    Made with toasted bread slices that are topped with flavorful cheese, smoked salmon, and poppy
+                    seeds. Apart from toasting the bread slices, these cream cheese smoked salmon toasts don't involve
+                    actual cooking.
+                </p>
+
+                <span class="d-block mt-5" id="starterPrice5">$11.90</span>
+            </div>
+
+            <div class="col-lg-4 fs-5 text-center px-5">
+                <span style="font-family: 'Poppins', serif;" class="fs-4" id="starterName6">
+                    Crispy Calamari
+                </span>
+
+                <p class="fs-6 mt-2" id="starterDesc6">
+                    Tender pieces of squid soaked in buttermilk, then coated in seasoned flour and deep fried to golden
+                    brown perfection. A quick and easy appetizer option that's even better than what you'd get at a
+                    restaurant!
+                </p>
+
+                <span class="d-block mt-5" id="starterPrice6">$9.90</span>
+            </div>
+        </div>
+
+        <!--Main Courses-->
+        <div class="d-flex flex-column align-items-center mb-5">
+            <div class="fs-4 text-center border-bottom my-5" style="font-family: 'Merriweather', serif;">
+                Main Courses
+            </div>
+        </div>
+
+        <!--Main Course Menu-->
+        <div class="row gy-5 justify-content-center background-style"
+            style="background-image: url(images/MainCourses.jpg); background-attachment: fixed;">
+            <div class="col-lg-4 fs-5 text-center px-5">
+                <span style="font-family: 'Poppins', serif;" class="fs-4" id="mainName1">
+                    Pumpkin Ravioli
+                </span>
+
+                <p class="fs-6 mt-2" id="mainDesc1">
+                    Delicious filling made of roasted pumpkin, ricotta and breadcrumbs, enveloped in a smooth, light,
+                    homemade pasta dough. Cooked in a brown butter, sage and pine nut sauce.
+                </p>
+
+                <span class="d-block mt-5" id="mainPrice1">$25.90</span>
+
+                <img src="icons/VeganIcon.png" alt="vegan" width="20px" height="20px" class="mt-2">
+            </div>
+
+            <div class="col-lg-4 fs-5 text-center px-5">
+                <span style="font-family: 'Poppins', serif;" class="fs-4" id="mainName2">
+                    Four-Onion Tart
+                </span>
+
+                <p class="fs-6 mt-2" id="mainDesc2">
+                    Creamy, herbed goat cheese is crumbled on top of beautifully caramelized onions to be baked on a bed
+                    of golden, flaky puff pastry.
+                </p>
+
+                <span class="d-block mt-5" id="mainPrice2">$19.90</span>
+
+                <img src="icons/VeganIcon.png" alt="vegan" width="20px" height="20px" class="mt-2">
+            </div>
+
+            <div class="col-lg-4 fs-5 text-center px-5">
+                <span style="font-family: 'Poppins', serif;" class="fs-4" id="mainName3">
+                    Moules Mariniere
+                </span>
+
+                <p class="fs-6 mt-2" id="mainDesc3">
+                    Mussels in white wine sauce. Traditionally served with fries to compose moules-frites. Classic
+                    French shellfish recipe: moules mariniére, or mussels in garlic and wine.
+                </p>
+
+                <span class="d-block mt-5" id="mainPrice3">$20.90</span>
+            </div>
+
+            <div class="col-lg-4 fs-5 text-center px-5">
+                <span style="font-family: 'Poppins', serif;" class="fs-4"  id="mainName4">
+                    Rosemary Chicken
+                </span>
+
+                <p class="fs-6 mt-2" id="mainDesc4">
+                    Seared chicken breasts coated in a garlic and herb sauce, then baked to golden brown perfection.
+                    Easy dinner option that's sure to get rave reviews.
+                </p>
+
+                <span class="d-block mt-5" id="mainPrice4">$24..90</span>
+
+                <img src="icons/StarIcon.png" alt="vegan" width="20px" height="20px" class="mt-2">
+            </div>
+
+            <div class="col-lg-4 fs-5 text-center px-5" >
+                <span style="font-family: 'Poppins', serif;" class="fs-4" id="mainName5">
+                    Salmon in Black Butter
+                </span>
+
+                <p class="fs-6 mt-2" id="mainDesc5">
+                    Perfectly grilled salmon, moist and flaky with silky heavenly lemon and butter sauce. Served it with
+                    grilled cauliflower steaks and charred lemon for an amazing Salmon dinner.
+                </p>
+
+                <span class="d-block mt-5" id="mainPrice5">$34.90</span>
+            </div>
+
+            <div class="col-lg-4 fs-5 text-center px-5">
+                <span style="font-family: 'Poppins', serif;" class="fs-4" id="mainName6">
+                    Melina’s Burger
+                </span>
+
+                <p class="fs-6 mt-2" id="mainDesc6">
+                    Crispy seasoned chicken breast, topped with mandatory melted cheese and piled onto soft rolls with
+                    onion, avocado, lettuce, tomato and garlic mayo.
+                </p>
+
+                <span class="d-block mt-5" id="mainPrice6">$15.90</span>
+
+                <img src="icons/StarIcon.png" alt="vegan" width="20px" height="20px" class="mt-2">
+            </div>
+        </div>
+    </div>
+
+    <!--Image Section-->
+    <div class="container-lg content-style">
+        <div class="p-5">
+            <div class="row g-5">
+                <div class="col-lg-3">
+                    <div class="card">
+                        <img src="images/SoupOfTheDay.jpg" class="card-img" alt="Starter1" width="100px" height="200px">
+
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Soup of The Day</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="card">
+                        <img src="images/OrganicSalad.jpg" class="card-img" alt="Starter1" width="100px" height="200px">
+
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Organic Spinach Salad</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="card">
+                        <img src="images/RosemaryChicken.jpg" class="card-img" alt="Starter1" width="100px"
+                            height="200px">
+
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Rosemary Chicken</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="card">
+                        <img src="images/Burger.jpg" class="card-img" alt="Starter1" width="100px" height="200px">
+
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Melina Burger</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="container-lg d-flex flex-lg-row flex-column justify-content-evenly content-style mt-1">
+        <div class="text-center p-4">
+            <span>Mon - Fri: 11am - 10pm​</span>
+            <br>
+            <span>Sat - Sun: 11am - 12am</span>
+        </div>
+
+        <div class="text-center p-4">
+            <span>123, Jalan Masjid Negeri</span>
+            <br>
+            <span>Jelutong, Penang 11600</span>
+        </div>
+
+        <div class="text-center p-4">
+            <span>Follow Us</span>
+            <br>
+
+            <a class="mx-1" href="https://www.twitter.com">
+                <img src="icons/TwitterIcon.png" alt="Twitter" height="25">
+            </a>
+
+            <a class="mx-1" href="https://www.facebook.com">
+                <img src="icons/FacebookIcon.png" alt="Facebook" height="25">
+            </a>
+
+            <a class="mx-1" href="https://www.instagram.com">
+                <img src="icons/InstagramIcon.png" alt="Instagram" height="25">
+            </a>
+        </div>
+    </div>
+
+    <!--Copyright Bar-->
+    <p class="p-3 text-center container-lg mt-1 content-style">Copyright ©2023 All rights reserved. Proudly created with
+        Bootstrap.</p>
+
+    <!--Script Section-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!--Chat Bot-->
+    <script src="https://www.momentcrm.com/embed"></script>
+    <script>
+        MomentCRM('init', {
+            'teamId': 'paradisedining',
+            'doChat': true,
+            'doTracking': false,
+        });
+    </script>
+
+    <!-- Social Media Sidebar -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6061de2083e89899"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-firestore.js"></script>
+
+    <script src="js/config.js"></script>
+
+    <script>     
+        // Initialize Firebase
+        var app = firebase.initializeApp(firebaseConfig);
+
+        var db = firebase.firestore(app);
+
+        //subscribing to collection updates
+        var ref = firebase.firestore(app).collection('Starters');
+        var ref2 = firebase.firestore(app).collection('MainCourse');
+
+        var i = 1;
+
+        var onCollectionUpdate = function (querySnapshot){
+            querySnapshot.forEach(function (doc){
+                document.getElementById("starterName" + i).innerHTML = doc.data().Name;
+                document.getElementById("starterDesc" + i).innerHTML = doc.data().Description;
+                document.getElementById("starterPrice" + i).innerHTML = "$" + doc.data().Price;
+
+                i++;
+            });
+
+            i = 1;
+        }
+
+        var onCollectionUpdate2 = function (querySnapshot){
+            querySnapshot.forEach(function (doc){
+                document.getElementById("mainName" + i).innerHTML = doc.data().Name;
+                document.getElementById("mainDesc" + i).innerHTML = doc.data().Description;
+                document.getElementById("mainPrice" + i).innerHTML = "$" + doc.data().Price;
+
+                i++;
+            });
+
+            i = 1;
+        }
+
+        ref.onSnapshot(onCollectionUpdate);
+        ref2.onSnapshot(onCollectionUpdate2);
+    </script>
+</body>
+
+</html>

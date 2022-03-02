@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Paradise Dining</title>
+
+    <link rel="icon" sizes="128x128" href="/icons/icon-128x128.png">
+    <link rel="icon" sizes="192x192" href="/icons/icon-192x192.png">
+    <link rel="icon" sizes="256x256" href="/icons/icon-256x256.png">
+    <link rel="icon" sizes="384x384" href="/icons/icon-384x384.png">
+    <link rel="icon" sizes="512x512" href="/icons/icon-512x512.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="background-style">
+    <!--Title Bar-->
+    <div class="container-lg d-flex align-items-center mt-3 content-style">
+        <h1 class="flex-grow-1 justify-content-center text-center p-2">
+            <a class="nav-link" href="index.html" style="font-family: 'Merriweather', serif;">Paradise Dining</a>
+        </h1>
+
+        <!--Nav Link for L and higher-->
+        <div class="d-none d-lg-block p-2">
+            <ul class="nav flex-nowrap">
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="reservations.html">Reservations</a>
+                </li>
+
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+                <li class="nav-item p-2">
+                    <a class="nav-link orderOnline" href="orderOnline.html">Order Online</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Nav Link for L lower-->
+        <div class="d-block d-lg-none p-3">
+            <button class="btn btn-dark" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="icons/PullDownIcon.png" height="25" alt="Pull Down">
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-dark text-center" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item" href="about.html">About</a></li>
+                <li><a class="dropdown-item" href="menu.html">Menu</a></li>
+                <li><a class="dropdown-item" href="reservations.html">Reservations</a></li>
+                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                <li><a class="dropdown-item" href="orderOnline.html">Order Online</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Body-->
+    <div class="container-lg content-style p-0 mt-1">
+        <div class="row me-0">
+            <!--Guest Info and Menu Choices-->
+            <div class="col-lg-3 pe-0">
+                <span class="d-block ps-5 py-3 border-bottom fs-5" style="font-family: 'Merriweather', serif;"
+                    onclick="openNav()" id="userLogin">
+                    <img src="icons/UserIcon.png" alt="User Icon" width="30px" height="30px"
+                        style="position: relative; bottom: 3px; right: 5px;">
+
+                    <span>Welcome, </span>
+                    <span id="displayName">Guest</span>
+                </span>
+
+                <!--SideNav-->
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="container mt-4">
+                        <form>
+                            <div class="row">
+                                <h2 style="text-align:center" class="mb-3">Login with Social Media
+                                    <!--or Manually-->
+                                </h2>
+
+                                <div class="col-12 text-center">
+                                    <a href="#" class="fb mb-3" id="fbbtn">
+                                        <i class="fa fa-facebook fa-fw"></i> Sign in with Facebook
+                                    </a>
+                                    <a href="#" class="twitter btn mb-3" id="twitterbtn">
+                                        <i class="fa fa-twitter fa-fw"></i> Sign in with Twitter
+                                    </a>
+                                    <a href="#" class="google btn mb-3" id="googlebtn">
+                                        <i class="fa fa-google fa-fw"></i>
+                                    </a>
+                                </div>
+
+                                <!-- <div class="col-12">
+                                    <div class="hide-md-lg">
+                                        <p>Or sign in manually:</p>
+                                    </div>
+
+                                    <input class="form-control mb-3" type="text" name="username" placeholder="Username"
+                                        required>
+                                    <input class="form-control mb-3" type="password" name="password"
+                                        placeholder="Password" required>
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    </div>
+                                </div> -->
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- <div class="bottom-container">
+                        <div class="row">
+                            <div class="col">
+                                <a href="#">Sign up</a>
+                            </div>
+                            <div class="col-lg-auto pe-4">
+                                <a href="#">Forgot password?</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+                <!--Select Between Starters and MainCourses-->
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button fs-6" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                                style="font-family: 'Merriweather', serif;">
+                                Menu
+                            </button>
+                        </h2>
+
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body" id="StartersBtnStyle">
+                                Starters
+                            </div>
+
+                            <div class="accordion-body" id="MainCoursesBtnStyle">
+                                Main Courses
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Menu Selection-->
+            <div class="col-lg p-5 border-start" id="MenuSelection">
+                <!--Starters-->
+                <span class="d-block fs-2 text-center pb-3 pt-5" style="font-family: 'Merriweather', serif;">
+                    Menu
+                </span>
+
+                <hr>
+
+                <span class="d-block fs-2 text-center pt-3 pb-5" style="font-family: 'Merriweather', serif;"
+                    id="menuTitle">
+                    Starters
+                </span>
+
+                <div class="row px-5 py-3" id="menu1" onclick="selectStartersHandler(0)">
+                    <div class="col-lg fs-4" id="menuName1">
+                        Soup of the day
+                    </div>
+
+                    <div class="col-lg-auto" id="menuPrice1">
+                        $4.90
+                    </div>
+
+                    <div class="col-lg-12" id="menuDesc1">
+                        Our soups are prepared every morning using only the freshest vegetables. Every soup served has a
+                        vegetable base and is gluten-friendly as we use absolutely no flour, wheat or stock.
+                    </div>
+                </div>
+
+                <div class="row px-5 py-3 border-top" id="menu2" onclick="selectStartersHandler(1)">
+                    <div class="col-lg fs-4" id="menuName2">
+                        Bread with Olive Oil & Balsamic Dip
+                    </div>
+
+                    <div class="col-lg-auto" id="menuPrice2">
+                        $8.90
+                    </div>
+
+                    <div class="col-lg-12" id="menuDesc2">
+                        Easy appetizer, olive oil and balsamic vinegar pair with herbs and garlic for the easiest and
+                        most delicious bread dipping oil combo you've ever had!
+                    </div>
+                </div>
+
+                <div class="row px-5 py-3 border-top" id="menu3" onclick="selectStartersHandler(2)">
+                    <div class="col-lg fs-4" id="menuName3">
+                        Organic Spinach Salad
+                    </div>
+
+                    <div class="col-lg-auto" id="menuPrice3">
+                        $10.90
+                    </div>
+
+                    <div class="col-lg-12" id="menuDesc3">
+                        Salad itself was so simple. Baby spinach was fresh, the avocado, perfectly ripe, and the dried
+                        cranberries and pine nuts a lovely touch add on dressing and a crunchy bite of sea salt!
+                    </div>
+                </div>
+
+                <div class="row px-5 py-3 border-top" id="menu4" onclick="selectStartersHandler(3)">
+                    <div class="col-lg fs-4" id="menuName4">
+                        Roasted Vegetables
+                    </div>
+
+                    <div class="col-lg-auto" id="menuPrice4">
+                        $5.90
+                    </div>
+
+                    <div class="col-lg-12" id="menuDesc4">
+                        Roasted vegetables are a uniquely special side. Very simple vegetable dish seasoned with dry
+                        soup powder, and baked until tender and caramelized. They're tender and creamy but crisp and
+                        crunchy.
+                    </div>
+                </div>
+
+                <div class="row px-5 py-3 border-top" id="menu5" onclick="selectStartersHandler(4)">
+                    <div class="col-lg fs-4" id="menuName5">
+                        Smoked Salmon Toasts
+                    </div>
+
+                    <div class="col-lg-auto" id="menuPrice5">
+                        $11.90
+                    </div>
+
+                    <div class="col-lg-12" id="menuDesc5">
+                        Made with toasted bread slices that are topped with flavorful cheese, smoked salmon, and poppy
+                        seeds. Apart from toasting the bread slices, these cream cheese smoked salmon toasts don't
+                        involve actual cooking.
+                    </div>
+                </div>
+
+                <div class="row px-5 py-3 border-top" id="menu6" onclick="selectStartersHandler(5)">
+                    <div class="col-lg fs-4" id="menuName6">
+                        Crispy Calamari
+                    </div>
+
+                    <div class="col-lg-auto" id="menuPrice6">
+                        $9.90
+                    </div>
+
+                    <div class="col-lg-12" id="menuDesc6">
+                        Tender pieces of squid soaked in buttermilk, then coated in seasoned flour and deep fried to
+                        golden brown perfection. A quick and easy appetizer option that's even better than what you'd
+                        get at a restaurant!
+                    </div>
+                </div>
+            </div>
+
+            <!--Check Out-->
+            <div class="col-lg-3 text-center border-start px-0">
+                <!--Items Count-->
+                <div class="row m-0 py-3 border-bottom">
+                    <div class="col-lg text-start ps-4 fs-5" style="font-family: 'Merriweather', serif;">
+                        My Order
+                    </div>
+
+                    <div class="col-lg-auto fs-5" id="itemCount">
+                        (0 items)
+                    </div>
+                </div>
+
+                <!--Ordered Item Checklist-->
+                <div id="orderedItem" style="font-family: 'Poppins', serif; font-size: 15px;">
+                    <div class="mx-5 p-4">
+                        <img src="icons/ItemBagIcon.png" alt="Item Bag Icon"><br>
+
+                        <span style="font-size: 14px;">Browse our menu and start adding items to your order</span>
+                    </div>
+                </div>
+
+                <!--Subtotal-->
+                <div class="row m-0 py-3 border-top border-5">
+                    <div class="col-lg text-start ps-4 fs-5" style="font-family: 'Merriweather', serif;">
+                        Subtotal
+                    </div>
+
+                    <div class="col-lg-auto fs-5 pe-4" id="subtotal">
+                        $0
+                    </div>
+                </div>
+
+                <!--Special Request-->
+                <div class="p-3 border-bottom border-top" id="specialReq">
+                    <img src="icons/PlusIcon.png" alt="Special Request Icon" width="25px" height="25px">
+
+                    Special Request
+                </div>
+
+                <div class="py-3 text-start ps-4">
+                    Pickup Only
+                </div>
+
+                <div class="py-3 text-start ps-4">
+                    For: ASAP (in 15 minutes)
+                </div>
+
+                <!--Order Now Button-->
+                <div class="d-grid">
+                    <button type="submit" id="orderNowbtn">Order Now ></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="container-lg d-flex flex-lg-row flex-column justify-content-evenly content-style mt-1">
+        <div class="text-center p-4">
+            <span>Mon - Fri: 11am - 10pm​</span>
+            <br>
+            <span>Sat - Sun: 11am - 12am</span>
+        </div>
+
+        <div class="text-center p-4">
+            <span>123, Jalan Masjid Negeri</span>
+            <br>
+            <span>Jelutong, Penang 11600</span>
+        </div>
+
+        <div class="text-center p-4">
+            <span>Follow Us</span>
+            <br>
+
+            <a class="mx-1" href="https://www.twitter.com">
+                <img src="icons/TwitterIcon.png" alt="Twitter" height="25">
+            </a>
+
+            <a class="mx-1" href="https://www.facebook.com">
+                <img src="icons/FacebookIcon.png" alt="Facebook" height="25">
+            </a>
+
+            <a class="mx-1" href="https://www.instagram.com">
+                <img src="icons/InstagramIcon.png" alt="Instagram" height="25">
+            </a>
+        </div>
+    </div>
+
+    <!--Copyright Section-->
+    <p class="p-3 text-center container-lg mt-1 content-style">Copyright ©2023 All rights reserved. Proudly created with
+        Bootstrap.</p>
+
+    <!--Script Section-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!--Chat Bot-->
+    <script src="https://www.momentcrm.com/embed"></script>
+    <script>
+        MomentCRM('init', {
+            'teamId': 'paradisedining',
+            'doChat': true,
+            'doTracking': false,
+        });
+    </script>
+
+    <!-- Social Media Sidebar -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6061de2083e89899"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+               https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+
+    <script src="js/config.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var app = firebase.initializeApp(firebaseConfig);
+
+        var db = firebase.firestore(app);
+
+        //subscribing to collection updates
+        var ref = firebase.firestore(app).collection('Starters');
+        var ref2 = firebase.firestore(app).collection('MainCourse');
+        var ref3 = firebase.firestore(app).collection('OrderedItem');
+
+        var Starters = [];
+        var MainCourses = [];
+
+        var itemCount = 0;
+        var subtotal = 0;
+        var orderedItem = [];
+
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "380px";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function specialReqHandler() {
+            document.getElementById("specialReq").innerHTML = '<textarea class="form-control" id="inputMessage" rows="1" placeholder="Special Request"></textarea>';
+
+            document.getElementById("specialReq").removeEventListener("click", specialReqHandler);
+        }
+
+        function selectStartersHandler() {
+            var proceed = true;
+            var quantity = parseInt(prompt("Quantity: "));
+
+            while (isNaN(quantity)) {
+                if (confirm("Please enter quantity!!!")) {
+                    quantity = parseInt(prompt("Quantity: "));
+                }
+                else {
+                    proceed = false;
+                    break;
+                }
+            }
+
+            if (proceed) {
+                var name = Starters[arguments[0]].name;
+                var price = Starters[arguments[0]].price * quantity;
+
+                if (itemCount === 0) {
+                    $("#orderedItem").html('<div class="row text-start mx-4 py-3 gx-3"><div class="col-lg">' + quantity + ' x ' + name
+                        + '</div><div class="col-lg-auto">$' + price.toFixed(2) + '</div></div>');
+                }
+                else {
+                    $("#orderedItem").append('<div class="row text-start mx-4 py-3 gx-3 border-top"><div class="col-lg">' + quantity + ' x ' + name
+                        + '</div><div class="col-lg-auto">$' + price.toFixed(2) + '</div></div>');
+                }
+
+                let temp = {
+                    name: name,
+                    price: price.toFixed(2),
+                    quantity: quantity
+                }
+
+                orderedItem.push(temp);
+
+                itemCount += quantity;
+                subtotal += price;
+
+                $("#itemCount").html('(' + itemCount + ' items)');
+                $("#subtotal").html('$' + subtotal.toFixed(2));
+            }
+        }
+
+        function selectMainCoursesHandler() {
+            var proceed = true;
+            var quantity = parseInt(prompt("Quantity: "));
+
+            while (isNaN(quantity)) {
+                if (confirm("Please enter quantity!!!")) {
+                    quantity = parseInt(prompt("Quantity: "));
+                }
+                else {
+                    proceed = false;
+                    break;
+                }
+            }
+
+            if (proceed) {
+                var name = MainCourses[arguments[0]].name;
+                var price = MainCourses[arguments[0]].price * quantity;
+
+                if (itemCount === 0) {
+                    $("#orderedItem").html('<div class="row text-start mx-4 py-3 gx-3"><div class="col-lg">' + quantity + ' x ' + name
+                        + '</div><div class="col-lg-auto">$' + price.toFixed(2) + '</div></div>');
+                }
+                else {
+                    $("#orderedItem").append('<div class="row text-start mx-4 py-3 gx-3 border-top"><div class="col-lg">' + quantity + ' x ' + name
+                        + '</div><div class="col-lg-auto">$' + price.toFixed(2) + '</div></div>');
+                }
+
+                let temp = {
+                    name: name,
+                    price: price.toFixed(2),
+                    quantity: quantity
+                }
+
+                orderedItem.push(temp);
+
+                itemCount += quantity;
+                subtotal += price;
+
+                $("#itemCount").html('(' + itemCount + ' items)');
+                $("#subtotal").html('$' + subtotal.toFixed(2));
+            }
+        }
+
+        function ableOrder() {
+            if (itemCount === 0) {
+                alert("Cart is empty, add items to kick off your order!");
+            }
+            else {
+                var year = new Date().getFullYear();
+                var month = new Date().getMonth();
+                var day = new Date().getDate();
+                var hour = new Date().getHours();
+                var minutes = new Date().getMinutes();
+
+                if (minutes < 10) {
+                    minutes = "0" + minutes;
+                }
+
+                var recordedTime = year + "-" + (month + 1) + "-" + day + " on " + hour + ":" + minutes;
+
+                var str = "";
+
+                for (var i = 0; i < orderedItem.length; i++) {
+                    str += "Name: " + orderedItem[i].name;
+                    str += "\nQuantity: " + orderedItem[i].quantity;
+                    str += "\nPrice: " + orderedItem[i].price + "\n\n";
+                }
+
+                alert("\t\t\tChecklist\n\n" + str + "Subtotal: " + subtotal.toFixed(2) + "\n\nThank you for choosing us :)");
+
+                if (typeof (Storage) != "undefined") {
+                    var AllOrderedItem = JSON.parse(localStorage.getItem("AllOrderedItem"));
+                }
+
+                if (AllOrderedItem == null) {
+                    AllOrderedItem = [];
+
+                    let temp = {
+                        ItemCount: itemCount,
+                        SubTotal: subtotal.toFixed(2),
+                        OrderedItem: orderedItem,
+                        RecordedTime: recordedTime
+                    }
+
+                    AllOrderedItem.push(temp);
+
+                    if (typeof (Storage) != "undefined") {
+                        localStorage.setItem("AllOrderedItem", JSON.stringify(AllOrderedItem));
+                    }
+                }
+                else {
+                    let temp = {
+                        ItemCount: itemCount,
+                        SubTotal: subtotal.toFixed(2),
+                        OrderedItem: orderedItem,
+                        RecordedTime: recordedTime
+                    }
+
+                    AllOrderedItem.push(temp);
+
+                    if (typeof (Storage) != "undefined") {
+                        localStorage.setItem("AllOrderedItem", JSON.stringify(AllOrderedItem));
+                    }
+                }
+
+                ref3.add({
+                    ItemCount: itemCount,
+                    SubTotal: subtotal.toFixed(2),
+                    OrderedItem: orderedItem,
+                    RecordedTime: recordedTime
+                }).then(function (docRef) {
+                    console.log("Document written with ID: ", docRef.id);
+
+                    $("#orderedItem").html('<div class="mx-5 p-4"><img src="icons/ItemBagIcon.png" alt="Item Bag Icon"><br>'
+                        + '<span style="font-size: 14px;">Browse our menu and start adding items to your order</span></div>');
+
+                    $("#itemCount").html('(0 items)');
+                    $("#subtotal").html('$0');
+                }).catch(function (error) {
+                    console.error("Error adding documment: ", error);
+                });
+
+                subtotal = 0;
+                itemCount = 0;
+                orderedItem = [];
+            }
+        }
+
+        function unableOrder() {
+            alert("Please sign in to make an order!!!")
+        }
+
+        function toggleSignInGoogle() {
+            if (!firebase.auth().currentUser) {
+                var provider = new firebase.auth.GoogleAuthProvider();
+                provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+
+                firebase.auth().signInWithPopup(provider)
+                    .then(function (result) {
+                        var token = result.credential.accessToken;
+                        var user = result.user;
+
+                        alert("Signed In!!!");
+                    })
+                    .catch(function (error) {
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+                        var email = error.email;
+                        var credential = error.credential;
+
+                        if (errorCode === 'auth/account-exists-with-different-credential') {
+                            alert('You have already signed up with a different auth provider for that email.');
+                        }
+                        else {
+                            console.error(error);
+                        }
+                    });
+            }
+            else {
+                firebase.auth().signOut();
+                alert("Signed Out!!!");
+            }
+        }
+
+        function initApp() {
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                    var displayName = user.displayName;
+                    var email = user.email;
+                    var emailVerified = user.emailVerified;
+                    var photoURL = user.photoURL;
+                    var isAnonymous = user.isAnonymous;
+                    var uid = user.uid;
+                    var providerData = user.providerData;
+
+                    console.log("Signed in");
+                    console.log(displayName);
+
+                    document.getElementById("displayName").innerHTML = displayName;
+                    document.getElementById("googlebtn").addEventListener('click', toggleSignInGoogle, false);
+                    document.getElementById("googlebtn").innerHTML = "Sign Out";
+                    document.getElementById("orderNowbtn").removeEventListener('click', unableOrder, false);
+                    document.getElementById("orderNowbtn").addEventListener('click', ableOrder, false);
+                    $("#fbbtn").hide();
+                    $("#twitterbtn").hide();
+                }
+                else {
+                    console.log("Signed out");
+
+                    document.getElementById("displayName").innerHTML = "Guest";
+                    document.getElementById("googlebtn").addEventListener('click', toggleSignInGoogle, false);
+                    document.getElementById("googlebtn").innerHTML = "Sign in with Google";
+                    document.getElementById("orderNowbtn").removeEventListener('click', ableOrder, false);
+                    document.getElementById("orderNowbtn").addEventListener('click', unableOrder, false);
+                    $("#fbbtn").show();
+                    $("#twitterbtn").show();
+                }
+            });
+        }
+
+        $(function () {
+            initApp();
+
+            document.getElementById("specialReq").addEventListener("click", specialReqHandler);
+
+            ref
+                .get()
+                .then(function (querySnapshot) {
+                    querySnapshot.forEach(function (document) {
+                        doc = document.data();
+
+                        let temp = {
+                            name: doc.Name,
+                            price: parseFloat(doc.Price)
+                        }
+
+                        Starters.push(temp);
+                    });
+                });
+
+            ref2
+                .get()
+                .then(function (querySnapshot) {
+                    querySnapshot.forEach(function (document) {
+                        doc = document.data();
+
+                        let temp = {
+                            name: doc.Name,
+                            price: parseFloat(doc.Price)
+                        }
+
+                        MainCourses.push(temp);
+                    });
+                });
+
+            $("#StartersBtnStyle").click(function () {
+                var i = 1;
+
+                ref
+                    .get()
+                    .then(function (querySnapshot) {
+                        querySnapshot.forEach(function (document) {
+                            doc = document.data();
+
+                            $("#menuName" + i).html(doc.Name);
+                            $("#menuDesc" + i).html(doc.Description);
+                            $("#menuPrice" + i).html("$" + doc.Price);
+                            $("#menu" + i).attr("onclick", "selectStartersHandler(" + (i - 1) + ")");
+
+                            i++;
+                        });
+                    });
+
+                $("#menuTitle").html("Starters");
+                $("#StartersBtnStyle").css("background-color", "#C8E9B8");
+                $("#StartersBtnStyle").css("color", "black");
+
+                $("#MainCoursesBtnStyle").css("background-color", "black");
+                $("#MainCoursesBtnStyle").css("color", "white");
+            });
+
+            $("#MainCoursesBtnStyle").click(function () {
+                var i = 1;
+
+                ref2
+                    .get()
+                    .then(function (querySnapshot) {
+                        querySnapshot.forEach(function (document) {
+                            doc = document.data();
+
+                            $("#menuName" + i).html(doc.Name);
+                            $("#menuDesc" + i).html(doc.Description);
+                            $("#menuPrice" + i).html("$" + doc.Price);
+                            $("#menu" + i).attr("onclick", "selectMainCoursesHandler(" + (i - 1) + ")");
+
+                            i++;
+                        });
+                    });
+
+                $("#menuTitle").html("Main Courses");
+                $("#MainCoursesBtnStyle").css("background-color", "#C8E9B8");
+                $("#MainCoursesBtnStyle").css("color", "black");
+
+                $("#StartersBtnStyle").css("background-color", "black");
+                $("#StartersBtnStyle").css("color", "white");
+            });
+        });
+    </script>
+</body>
+
+</html>
